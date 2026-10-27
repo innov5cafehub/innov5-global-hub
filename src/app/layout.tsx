@@ -2,11 +2,14 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 const siteName = "INNOV5 GLOBAL HUB";
+
 const siteDescription =
   "INNOV5 GLOBAL HUB turns bold ideas into meaningful digital experiences through web development, software solutions, branding, digital commerce, and business technology.";
 
+const siteUrl = "https://innov5-global-hub.vercel.app";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("http://localhost:3001"),
+  metadataBase: new URL(siteUrl),
 
   title: {
     default: "INNOV5 GLOBAL HUB | Innovating Tomorrow, Today",
@@ -19,7 +22,7 @@ export const metadata: Metadata = {
 
   keywords: [
     "INNOV5 GLOBAL HUB",
-    "technology company",
+    "technology company in Nigeria",
     "digital innovation",
     "web development",
     "software development",
@@ -30,23 +33,39 @@ export const metadata: Metadata = {
     "digital solutions",
   ],
 
+  alternates: {
+    canonical: "/",
+  },
+
   openGraph: {
     title: "INNOV5 GLOBAL HUB | Innovating Tomorrow, Today",
     description: siteDescription,
     siteName,
+    url: siteUrl,
     type: "website",
     locale: "en_NG",
+    images: [
+      {
+        url: "/innov5-global-hub-logo.png",
+        alt: "INNOV5 GLOBAL HUB logo",
+      },
+    ],
   },
 
   twitter: {
     card: "summary_large_image",
     title: "INNOV5 GLOBAL HUB | Innovating Tomorrow, Today",
     description: siteDescription,
+    images: ["/innov5-global-hub-logo.png"],
   },
 
   robots: {
-    index: false,
-    follow: false,
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
   },
 };
 

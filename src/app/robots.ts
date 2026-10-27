@@ -4,7 +4,8 @@ export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
       userAgent: "*",
-      disallow: "/",
+      allow: "/",
     },
+    host: "https://innov5-global-hub.vercel.app",
   };
 }
