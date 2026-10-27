@@ -11,6 +11,10 @@ const siteUrl = "https://innov5-global-hub.vercel.app";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
 
+  verification: {
+    google: "3bFCv23jylIX7Lea8-aXWQubNtUz_0q5hMooveAOIhQ",
+  },
+
   title: {
     default: "INNOV5 GLOBAL HUB | Innovating Tomorrow, Today",
     template: "%s | INNOV5 GLOBAL HUB",
