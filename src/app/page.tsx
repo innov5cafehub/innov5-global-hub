@@ -6,31 +6,87 @@ import Image from "next/image";
 const services = [
   {
     number: "01",
-    title: "Web Development",
+    title: "Technology Solutions",
     description:
-      "Modern, responsive websites and web applications designed to help businesses establish a powerful digital presence.",
+      "Practical technology solutions that help people, businesses, and institutions solve real problems.",
     icon: "⌘",
   },
   {
     number: "02",
-    title: "Software Solutions",
+    title: "Software Development",
     description:
-      "Purpose-built digital systems that simplify operations, improve productivity, and solve real business problems.",
+      "Purpose-built websites, applications, and digital systems designed around real operational needs.",
     icon: "⚙",
   },
   {
     number: "03",
-    title: "Branding & Design",
+    title: "Artificial Intelligence",
     description:
-      "Memorable visual identities, graphics, and digital experiences that help brands stand out.",
+      "Exploring useful AI capabilities to improve workflows, decision-making, and digital experiences.",
     icon: "✳",
   },
   {
     number: "04",
-    title: "Digital Innovation",
+    title: "Digital Transformation",
     description:
-      "Technology-driven ideas and solutions that help businesses adapt, grow, and compete in a digital world.",
+      "Helping organisations use digital tools to modernise services, processes, and customer experiences.",
+    icon: "↗",
+  },
+  {
+    number: "05",
+    title: "Innovation & Research",
+    description:
+      "Investigating ideas, emerging technologies, and practical approaches to complex challenges.",
+    icon: "⌕",
+  },
+  {
+    number: "06",
+    title: "Entrepreneurship Development",
+    description:
+      "Supporting founders and aspiring entrepreneurs as they shape ideas into sustainable ventures.",
+    icon: "◇",
+  },
+  {
+    number: "07",
+    title: "Business Consulting",
+    description:
+      "Helping businesses identify opportunities, improve operations, and plan for responsible growth.",
+    icon: "◎",
+  },
+  {
+    number: "08",
+    title: "Technology Education",
+    description:
+      "Promoting digital knowledge, practical skills, and learning opportunities for the next generation.",
     icon: "✧",
+  },
+  {
+    number: "09",
+    title: "Startup Incubation",
+    description:
+      "Creating an environment where promising ideas can develop through guidance, collaboration, and support.",
+    icon: "↗",
+  },
+  {
+    number: "10",
+    title: "Branding & Digital Media",
+    description:
+      "Building clear brand identities and engaging visual communication for businesses and initiatives.",
+    icon: "✳",
+  },
+  {
+    number: "11",
+    title: "Product Design",
+    description:
+      "Shaping useful, accessible digital products through thoughtful user experience and product thinking.",
+    icon: "▧",
+  },
+  {
+    number: "12",
+    title: "Community Development",
+    description:
+      "Encouraging digital inclusion, collaboration, and initiatives that create meaningful community impact.",
+    icon: "⌘",
   },
 ];
 
@@ -148,23 +204,37 @@ export default function Home() {
             {menuOpen ? "✕" : "☰"}
           </button>
 
-          <nav className={`nav-links ${menuOpen ? "nav-open" : ""}`}>
-            <a href="#home" onClick={closeMenu}>
+          <nav
+            className={`nav-links ${menuOpen ? "nav-open" : ""}`}
+            aria-label="Main navigation"
+          >
+            <a href="/" onClick={closeMenu}>
               Home
             </a>
-            <a href="#about" onClick={closeMenu}>
+            <a href="/about" onClick={closeMenu}>
               About
             </a>
-            <a href="#services" onClick={closeMenu}>
+            <a href="/ecosystem" onClick={closeMenu}>
+              Ecosystem
+            </a>
+            <a href="/services" onClick={closeMenu}>
               Services
             </a>
-            <a href="#solutions" onClick={closeMenu}>
-              Solutions
-            </a>
-            <a href="#projects" onClick={closeMenu}>
+            <a href="/projects" onClick={closeMenu}>
               Projects
             </a>
-
+            <a href="/partnerships" onClick={closeMenu}>
+              Partnerships
+            </a>
+            <a href="/careers" onClick={closeMenu}>
+              Careers
+            </a>
+            <a href="/insights" onClick={closeMenu}>
+              Insights
+            </a>
+            <a href="/contact" onClick={closeMenu}>
+              Contact
+            </a>
             <a
               href="https://wa.me/2349033543367?text=Hello%20INNOV5%20GLOBAL%20HUB%2C%20I%20would%20like%20to%20make%20an%20enquiry."
               target="_blank"
@@ -292,20 +362,60 @@ export default function Home() {
 
           <div className="intro-copy">
             <p>
-              INNOV5 GLOBAL HUB is a technology and innovation-focused company
-              committed to exploring ideas, developing digital solutions, and
-              helping businesses navigate an increasingly connected world.
+              INNOV5 GLOBAL HUB is a technology and innovation company committed
+              to transformative solutions that empower individuals, businesses,
+              institutions, and communities. As a parent organisation, we bring
+              together technology-driven ventures focused on digital
+              transformation, entrepreneurship, education, research, and
+              business growth.
             </p>
 
             <p>
-              From web development and branding to business technology and
-              digital commerce, we bring creativity and technical thinking
-              together to build for what comes next.
+              We believe innovation should be practical, inclusive, and
+              impactful. We bring creativity, technical expertise, and
+              collaboration together to help promising ideas become useful
+              products, services, and enterprises.
             </p>
 
             <a href="#mission" className="text-link">
               Get to know our vision <span>↗</span>
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* OUR STORY & PURPOSE */}
+      <section className="company-story section-padding" id="story">
+        <div className="container story-grid">
+          <div>
+            <div className="section-label">
+              <span>01A</span> OUR STORY
+            </div>
+            <h2 className="section-heading">
+              Great ideas can come from anywhere.
+              <br />
+              <span className="gradient-text">They need room to grow.</span>
+            </h2>
+          </div>
+          <div className="story-copy">
+            <p>
+              INNOV5 GLOBAL HUB was founded on the belief that promising ideas
+              need the right environment, tools, guidance, and support to become
+              meaningful solutions.
+            </p>
+            <p>
+              We recognise the challenges faced by young innovators, startups,
+              and small businesses—including access to technology, mentorship,
+              business support, and opportunities to grow. Our response is to
+              build an innovation ecosystem, not just a single business.
+            </p>
+            <div className="purpose-statement">
+              <span>OUR PURPOSE</span>
+              <p>
+                To inspire innovation, unlock potential, and build technologies
+                and enterprises that improve lives and shape the future.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -479,13 +589,171 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ECOSYSTEM */}
+      <section className="ecosystem-section section-padding" id="ecosystem">
+        <div className="container">
+          <div className="section-top">
+            <div>
+              <div className="section-label">
+                <span>04A</span> OUR ECOSYSTEM
+              </div>
+              <h2 className="section-heading">
+                One hub.
+                <br />
+                <span className="gradient-text">
+                  Many ways to create impact.
+                </span>
+              </h2>
+            </div>
+            <p className="section-intro">
+              INNOV5 GLOBAL HUB is the parent organisation bringing together
+              ventures and initiatives with a shared commitment to technology,
+              entrepreneurship, and practical innovation.
+            </p>
+          </div>
+          <div className="ecosystem-grid">
+            <article className="ecosystem-card">
+              <span className="ecosystem-mark">IG</span>
+              <span className="solution-category">PARENT COMPANY</span>
+              <h3>INNOV5 GLOBAL HUB</h3>
+              <p>
+                The umbrella organisation developing technology-driven ventures
+                and initiatives focused on digital transformation, education,
+                research, entrepreneurship, and business growth.
+              </p>
+              <a href="#about" className="text-link">
+                Explore our vision <span>↗</span>
+              </a>
+            </article>
+            <article className="ecosystem-card">
+              <span className="ecosystem-mark">C</span>
+              <span className="solution-category">
+                TECHNOLOGY & ENTREPRENEURSHIP
+              </span>
+              <h3>Innov5 Cafe&apos; Hub</h3>
+              <p>
+                A technology-inspired collaborative space for learning,
+                creativity, networking, entrepreneurship, and innovation.
+              </p>
+              <a
+                href="mailto:innov5cafehub247@gmail.com?subject=Innov5%20Cafe%20Hub%20Enquiry"
+                className="text-link"
+              >
+                Connect with the Hub <span>↗</span>
+              </a>
+            </article>
+            <article className="ecosystem-card">
+              <span className="ecosystem-mark">V</span>
+              <span className="solution-category">DIGITAL COMMERCE</span>
+              <h3>VendiLink</h3>
+              <p>
+                A digital commerce platform helping businesses establish an
+                online presence, showcase products, and connect with customers
+                more effectively.
+              </p>
+              <a
+                href="https://vendilink.vercel.app/"
+                target="_blank"
+                rel="noreferrer"
+                className="text-link"
+              >
+                Visit VendiLink <span>↗</span>
+              </a>
+            </article>
+          </div>
+          <p className="ecosystem-note">
+            Additional subsidiaries and strategic initiatives may join the
+            ecosystem as the organisation grows.
+          </p>
+        </div>
+      </section>
+
+      {/* WHY INNOV5 */}
+      <section className="why-section section-padding" id="why-us">
+        <div className="container">
+          <div className="section-top">
+            <div>
+              <div className="section-label">
+                <span>04B</span> WHY INNOV5
+              </div>
+              <h2 className="section-heading">
+                Innovation with <span className="gradient-text">purpose.</span>
+              </h2>
+            </div>
+            <p className="section-intro">
+              We pair ambition with practical execution, putting people and
+              meaningful outcomes at the centre of our work.
+            </p>
+          </div>
+          <div className="why-grid">
+            {[
+              "Innovative Thinking",
+              "Technology-Driven Solutions",
+              "Customer-Centered Approach",
+              "Youth Empowerment Focus",
+              "Strategic Partnerships",
+              "Scalable Business Models",
+              "Commitment to Excellence",
+            ].map((item, i) => (
+              <article className="why-item" key={item}>
+                <span>{String(i + 1).padStart(2, "0")}</span>
+                <h3>{item}</h3>
+                <p>
+                  {
+                    [
+                      "We question assumptions and stay open to better ways of solving problems.",
+                      "We use appropriate technology to create useful, practical outcomes.",
+                      "We consider the needs and experiences of the people our solutions serve.",
+                      "We want young people to have opportunities to learn, create, and build.",
+                      "We believe collaboration expands knowledge, opportunity, and impact.",
+                      "We aim to develop ventures and products that can grow responsibly.",
+                      "We hold our work to high standards of quality, trust, and responsibility.",
+                    ][i]
+                  }
+                </p>
+              </article>
+            ))}
+          </div>
+          <div className="goals-commitment-grid">
+            <article className="goals-panel">
+              <span className="solution-category">OUR LONG-TERM GOALS</span>
+              <h3>Build for lasting impact.</h3>
+              <ul>
+                <li>Build globally recognised technology products.</li>
+                <li>
+                  Support entrepreneurs, startups, and impactful businesses.
+                </li>
+                <li>Create employment and promote digital inclusion.</li>
+                <li>Establish innovation hubs across Africa.</li>
+                <li>
+                  Develop world-class talent and become one of Africa&apos;s
+                  respected innovation companies.
+                </li>
+              </ul>
+            </article>
+            <article className="commitment-panel">
+              <span className="solution-category">OUR COMMITMENT</span>
+              <h3>A future where innovation is accessible to everyone.</h3>
+              <p>
+                Through technology, collaboration, and entrepreneurship, we will
+                keep working to develop solutions that create value, inspire
+                progress, and improve lives.
+              </p>
+              <a href="#contact" className="text-link">
+                Build with us <span>↗</span>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
       {/* PROJECTS */}
       <section className="projects-section section-padding" id="projects">
         <div className="container">
           <div className="section-top">
             <div>
               <div className="section-label">
-                <span>05</span> OUR WORK
+                <span>07</span> OUR WORK
               </div>
 
               <h2 className="section-heading">
@@ -626,7 +894,7 @@ export default function Home() {
           <div className="contact-glow" />
 
           <div className="section-label">
-            <span>06</span> LET&apos;S BUILD SOMETHING
+            <span>08</span> LET&apos;S BUILD SOMETHING
           </div>
 
           <h2>
